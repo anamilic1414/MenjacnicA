@@ -13,6 +13,8 @@ public class Valuta {
 	}
 
 	public void setNaziv(String naziv) {
+		if(naziv==null || naziv.isEmpty())
+			throw new RuntimeException("Greska pri unosu naziva.");
 		this.naziv = naziv;
 	}
 
@@ -21,18 +23,11 @@ public class Valuta {
 	}
 
 	public void setSkracenica(String skracenica) {
+		if(skracenica == null || skracenica.isEmpty())
+			throw new RuntimeException("Greska pri unosu skracenice.");
 		this.skracenica = skracenica;
 	}
 
-	public LinkedList<Kurs> getKursevi() {
-		return kursevi;
-	}
-
-	public void setKursevi(LinkedList<Kurs> kursevi) {
-		this.kursevi = kursevi;
-	}
-
-	
 
 	@Override
 	public String toString() {

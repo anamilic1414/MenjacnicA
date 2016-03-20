@@ -14,6 +14,8 @@ public class Kurs {
 	}
 
 	public void setProdajni(double prodajni) {
+		if(prodajni<0)
+			throw new RuntimeException("Greska pri unosu prodajnog kursa.");
 		this.prodajni = prodajni;
 	}
 
@@ -22,6 +24,8 @@ public class Kurs {
 	}
 
 	public void setKupovni(double kupovni) {
+		if(kupovni<0)
+			throw new RuntimeException("Greska pri unosu kupovnog kursa.");
 		this.kupovni = kupovni;
 	}
 
@@ -30,6 +34,8 @@ public class Kurs {
 	}
 
 	public void setSrednji(double srednji) {
+		if(srednji<0)
+			throw new RuntimeException("Greska pri unosu srednjeg kursa.");
 		this.srednji = srednji;
 	}
 
@@ -38,6 +44,8 @@ public class Kurs {
 	}
 
 	public void setDatum(GregorianCalendar datum) {
+		if(datum==null)
+			throw new RuntimeException("Greska pri unosu datuma.");
 		this.datum = datum;
 	}
 
